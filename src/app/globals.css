@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+}
+
+/* Subtle radial gradient overlay for premium feel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 100% 80% at 50% 0%,
+    rgba(234, 246, 255, 0.35) 0%,
+    transparent 50%
+  );
+  z-index: -1;
+}
